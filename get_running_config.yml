@@ -1,0 +1,22 @@
+---
+- name: Retrieve Cisco Switch Running Configuration
+  hosts: cisco
+  gather_facts: no
+  vars_prompt:
+    - name: "ansible_user"
+      prompt: "Enter the username"
+      private: no
+    - name: "ansible_password"
+      prompt: "Enter the password"
+      private: yes
+  tasks:
+    - name: Get running config
+      ios_command:
+        commands:
+          - show running-config
+      register: output
+
+    - name: Print running config
+      debug:
+        var: output.stdout_lines
+
