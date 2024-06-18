@@ -1,0 +1,2 @@
+[cisco]
+10.235.3.50 ansible_network_os=ios ansible_connection=network_cli
