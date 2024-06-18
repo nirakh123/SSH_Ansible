@@ -1,0 +1,21 @@
+Step 1: Install Ansible on Linux
+	-> sudo apt update
+	-> sudo apt install ansible -y
+	-> ansible --version 
+	
+Step 2: Set up Ansible Inventory & Configuration
+	a) Create a directory
+	-> mkdir ansible-cisco
+	-> cd ansible-cisco
+	b) Create an inventory
+	-> nano hosts
+	
+Step 3: Create the Ansible Playbook
+	-> nano get_running_config.yml
+	
+Step 4: Create Ansible Configuration File
+	-> nano ansible.cfg
+	
+Step 5: Run the Ansible Playbook 
+	-> ansible-playbook get_running_config.yml
+	
